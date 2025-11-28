@@ -1,0 +1,125 @@
+.page-404 {
+  font-family: "Oranienbaum", serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #E3F7DF;
+}
+@media (max-width: 768px) {
+  .page-404 {
+    padding: 1rem;
+  }
+}
+
+.page-404__content {
+  max-width: 600px;
+  width: 90%;
+}
+
+.page-404__title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #032205;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .page-404__title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .page-404__title {
+    font-size: 4rem;
+  }
+}
+
+.page-404__message {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 1rem 0 2rem;
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .page-404__message {
+    font-size: 1.25rem;
+    margin: 0.75rem 0 1.5rem;
+  }
+}
+
+.page-404__illustration {
+  margin: 2rem 0;
+}
+.page-404__illustration-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .page-404__illustration-image {
+    max-width: 90%;
+  }
+}
+
+.page-404__actions {
+  margin-top: 1rem;
+}
+.page-404__actions-button {
+  font-family: "Oranienbaum", serif;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  background: #032205;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.page-404__actions-button:hover {
+  background: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .page-404__actions-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-404__title,
+.page-404__message,
+.page-404__illustration,
+.page-404__actions {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.page-404__message {
+  animation-delay: 0.2s;
+}
+
+.page-404__illustration {
+  animation-delay: 0.4s;
+}
+
+.page-404__actions {
+  animation-delay: 0.6s;
+}/*# sourceMappingURL=404.css.map */
