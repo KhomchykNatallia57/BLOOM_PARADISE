@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Oranienbaum';
+  src: url('../../fonts/oranienbaum/Oranienbaum-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist-Regular';
+  src: url('../../fonts/urbanist/Urbanist-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist-SemiBold';
+  src: url('../../fonts/urbanist/Urbanist-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #f2ffef;
+
+  a {
+    color: #697d59 !important;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+html, body {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+.background {
+  width: 100%;
+  background-image: url("../../img/texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1524px) {
+  .header__container {
+    padding: 2vw;
+  }
+}

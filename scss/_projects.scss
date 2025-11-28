@@ -1,0 +1,251 @@
+.projects {
+  padding: 120px 0;
+  background: #f2ffef;
+
+  &__container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    position: relative;
+
+    h1 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #30461C;
+      line-height: 20px;
+      margin: 0;
+      min-width: 120px;
+    }
+
+    h2 {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 35px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #30461C;
+      line-height: 33.95px;
+      margin: 0;
+      max-width: 1120px;
+    }
+
+    @media (max-width: 1524px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      h1 {
+        min-width: auto;
+      }
+
+      h2 {
+        max-width: 100%;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 45px 0;
+    position: relative;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #BDC9B1;
+    }
+  }
+
+  &__icon {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  &__info {
+    flex: 1;
+    max-width: 338px;
+
+    &--add {
+      flex: 1;
+      max-width: 319px;
+    }
+  }
+
+  &__title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #30461C;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #30461C;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #30461C;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__images {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+
+    img {
+      width: 239px;
+      height: 247px;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__btn {
+    width: 1500px;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: 13px;
+    background: #30461C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: darken(#30461C, 10%);
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: 1524px) {
+    &__container {
+      padding: 0 40px;
+    }
+
+    &__item {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+      padding: 60px 0;
+    }
+
+    &__info {
+      max-width: 100%;
+      
+      &--add {
+        max-width: 100%;
+        margin-left: 0 !important;
+      }
+    }
+
+    &__images {
+      margin-left: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 0;
+
+    &__container {
+      padding: 0 20px;
+    }
+
+    &__images {
+      justify-content: center;
+      
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__images {
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    &__btn {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+}

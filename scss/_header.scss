@@ -1,0 +1,140 @@
+.header {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid #A4B19D;
+  
+  &__container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 62.52px;
+    position: relative;
+  }
+
+  &__logo-img {
+    display: block;
+    height: auto;
+    max-height: 50px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1600px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      flex-direction: column;
+      background-color: transparent;
+    }
+
+    &.active {
+      max-height: 500px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 1600px) {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+    }
+  }
+
+  &__link {
+    font-size: 17px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    color: #30461C;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #697d59;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    &-text {
+      font-size: 17px;
+      color: #30461C;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 400;
+    }
+
+    &-icon {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &__search {
+    &-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 30px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #30461C;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+
+    @media (max-width: 1600px) {
+      display: flex;
+    }
+  }
+}

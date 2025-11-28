@@ -1,0 +1,168 @@
+.clients {
+  background: #F2FFEF;
+  color: #30461C;
+  font-family: 'Urbanist', sans-serif;
+  padding: 120px 0;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__header {
+    position: relative;
+    min-height: 56px;
+    margin-bottom: 60px;
+
+    .clients__subtitle {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #30461C;
+      font-family: 'Urbanist-Regular', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .clients__title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: #30461C;
+      font-family: 'Urbanist-SemiBold', sans-serif;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+  }
+
+  &__marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .clients__track {
+      animation-play-state: paused;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+  }
+
+  &__marquee--bottom .clients__track {
+    animation: marqueeReverse 45s linear infinite;
+  }
+
+  &__card {
+    background: linear-gradient(270deg, #E8F9E6 0%, #F3FFF1 100%);
+    border-radius: 16px;
+    width: 260px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(0.9);
+      transition: filter 0.35s ease, transform 0.35s ease;
+      display: block;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+
+      img {
+        filter: grayscale(0%) brightness(1);
+      }
+    }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes marqueeReverse {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  /* --- Адаптив --- */
+  @media (max-width: 1024px) {
+    padding: 80px 0;
+    &__card { width: 200px; height: 100px; }
+    &__track { gap: 25px; animation-duration: 50s; }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+    &__header {
+      min-height: auto;
+      padding-bottom: 12px;
+
+      .clients__subtitle {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 0 auto 8px;
+      }
+
+      .clients__title {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 0;
+        font-size: 22px;
+        white-space: normal;
+      }
+    }
+    &__card { width: 160px; height: 80px; }
+    &__track { gap: 20px; animation-duration: 60s; }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+    .clients__title { font-size: 18px; }
+    .clients__subtitle { font-size: 12px; }
+    &__card { width: 140px; height: 70px; }
+    &__track { gap: 16px; animation-duration: 70s; }
+  }
+}
